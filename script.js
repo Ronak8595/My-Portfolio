@@ -1,6 +1,7 @@
 let home = document.querySelector('.home')
 let hobbies = document.querySelector('.hobbies')
 let skills = document.querySelector('.skills')
+let nameSection = document.querySelector('.nameSection');
 let opendSectionIndicator = document.querySelector('.opendSectionIndicator');
 home.addEventListener('click', () => {
    let ladingPageSection = document.querySelector('#ladingPageSection');
@@ -53,3 +54,12 @@ skillSection.scrollIntoView();
   skills.append(div)
  }
 })
+nameSection.addEventListener('click', () => {
+  let landingPage = document.querySelector('#ladingPageSection')
+  landingPage.scrollIntoView();
+})
+
+// close inspect element reference: https://stackoverflow.com/questions/28690564/is-it-possible-to-remove-inspect-element#:~:text=Ctrl%20%2B%20Shift%20%2B%20J
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
